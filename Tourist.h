@@ -7,22 +7,23 @@ using namespace std;
 
 class Tourist
 {
+	string name, number;
+	int age;
 public:
-	void Tourist::setPersone(const string& name, const int& age, const string& number)
+	// set
+	void setPersone(string Name, int Age, string Number)
 	{
-		if (!name.empty() || age != 0 || !number.empty())
-		{
-			this->age = age;
-			this->name = name;
-			this->number = number;
-		}
-		else
-			cerr << "error" << endl;
+		name = Name;
+		age = Age;
+		number = Number;
 	}
-    void print() const;
-private:
-    string name, number;
-    int age;
+	// get
+	void info() const
+	{
+		cout << "Name: " << name << endl;
+		cout << "Age: " << age << endl;
+		cout << "Phone number: " << number << endl;
+	}
 };
 
 #endif
