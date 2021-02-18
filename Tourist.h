@@ -1,6 +1,7 @@
 #ifndef TOURIST_H
 #define TOURIST_H
 
+#include <ctime>
 #include <string>
 
 using namespace std;

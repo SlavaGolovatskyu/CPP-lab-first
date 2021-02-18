@@ -1,19 +1,21 @@
 // ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
+#include <ctime>
 #include "Tourist.h"
 #include "Tour.h"
-
 
 using namespace std;
 
 int main()
 {
+	time_t rawtime;
+	struct tm *timeinfo;
+	time(&rawtime);
 	Tourist start;
 	Tour start1;
 	start.setPersone("Ivan", 25, "380969696152");
-	start1.setTour("Group", "All ukraine", "Kiev");
+	start1.setTour(time(&rawtime), time(&rawtime) + 200000, "Group", "All ukraine", "Kiev");
 	start.info();
 	start1.info();
 	system("pause");
